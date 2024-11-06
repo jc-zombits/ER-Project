@@ -76,6 +76,14 @@ flowchart TD
 
 
 
+### Configuración del entorno de desarrollo
 
+- Creamos el entorno virtual
+
+        - python3 -m venv env
+        - source env/bin/activate   # Para Linux/MacOS
+        - .\env\Scripts\activate    # Para Windows
+
+- 
 
 
