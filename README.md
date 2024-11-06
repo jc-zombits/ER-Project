@@ -35,3 +35,47 @@
 - **Proyección:**
     - Para el 2025, se espera que la aplicación pueda permitir simular el rendimiento de sistemas fotovoltaicos con una precisión del 95% en un plazo máximo de 24 horas.
 
+
+## Propuesta de Arquitectura
+
+### Frontend
+
+- **React:** Será el encargado de crear la interfaz de usuario, proporcionando una experiencia de usuario dinámica y responsiva. Se utilizará para mostrar datos, permitir interacciones y visualizar los resultados de las simulaciones y análisis.
+
+### Backend:
+
+- **Python (Django):** Será el corazón de la aplicación, gestionando la lógica principal, la base de datos y las API. Será responsable de:
+    - Procesar las solicitudes del frontend.
+    - Acceder y manipular la base de datos (PostgreSQL o MongoDB).
+    - Realizar cálculos y análisis de datos.
+    - Exponer APIs RESTful para que el frontend pueda consumir los datos.
+
+- **Rust:** Se utilizará para módulos específicos que requieran un alto rendimiento o seguridad, como:
+    - **Simulaciones:** Realizar cálculos numéricos intensivos para simular el comportamiento de diferentes sistemas de energía renovable.
+    - **Procesamiento de datos en tiempo real:** Analizar datos de sensores o dispositivos IoT de manera eficiente.
+    - **Criptografía:** Implementar algoritmos de cifrado para proteger datos sensibles.
+
+- **Node.js:** Podrá utilizarse para:
+    - **Websockets:** Implementar funcionalidades en tiempo real, como actualizaciones en vivo de los resultados de las simulaciones o notificaciones.
+    - **Microservicios:** Si la aplicación crece en complejidad, se pueden crear microservicios independientes utilizando Node.js para tareas específicas.
+
+### Bases de datos:
+
+- **PostgreSQL:** Es una excelente opción para almacenar datos estructurados como información de usuarios, proyectos, resultados de simulaciones y configuraciones del sistema.
+
+- **MongoDB:** Puede ser útil para almacenar datos no estructurados o semiestructurados, como logs, eventos y datos de series temporales.
+
+
+### Diagrama Simplificado
+
+flowchart TD
+    A(Frontend: React) --> B(Backend: Python)
+    B --> C(Base de datos: PostgreSQL/MongoDB)
+    B --> D(Módulos Rust: Simulaciones, Procesamiento de datos)
+    B --> E(Node.js: Websockets, Microservicios)
+
+
+
+
+
+
